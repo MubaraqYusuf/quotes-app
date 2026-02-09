@@ -3,64 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Quote</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            background: linear-gradient(135deg, #43cea2, #185a9d);
-            min-height: 100vh;
-        }
-
-        .card {
-            border-radius: 16px;
-        }
-    </style>
 </head>
+<body class="bg-light">
 
-<body>
 <div class="container py-5">
+    <div class="card shadow-sm p-4 mx-auto" style="max-width: 500px;">
+        <h3 class="mb-3">➕ Add New Quote</h3>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-6">
-
-            <div class="card shadow-lg">
-                <div class="card-body p-4">
-
-                    <h3 class="text-center mb-4">➕ Add New Quote</h3>
-
-                    <form method="POST">
-
-                        <div class="mb-3">
-                            <label class="form-label">Quote</label>
-                            <textarea name="quote" class="form-control" rows="4" required></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Author</label>
-                            <input type="text" name="author" class="form-control" required>
-                        </div>
-
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                💾 Save Quote
-                            </button>
-
-                            <a href="/" class="btn btn-outline-secondary">
-                                ← Back to Quotes
-                            </a>
-                        </div>
-
-                    </form>
-
-                </div>
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Quote</label>
+                <textarea name="quote" class="form-control" rows="3" required></textarea>
             </div>
 
-        </div>
-    </div>
+            <div class="mb-3">
+                <label class="form-label">Author</label>
+                <input name="author" class="form-control" required>
+            </div>
 
+            <button class="btn btn-success">Save</button>
+            <a href="/" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
 </div>
+
 </body>
 </html>
